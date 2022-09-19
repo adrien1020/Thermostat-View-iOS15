@@ -9,9 +9,11 @@ import SwiftUI
 
 @main
 struct ThermostatViewApp: App {
+    @State var currentTemp: Float = 20.0
+    @State var location: String = "Living Room"
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            ContentView(currentTemp: $currentTemp, location: $location)
         }
     }
 }
